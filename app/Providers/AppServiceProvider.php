@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Queue\Events\JobProcessing;
+use Illuminate\Queue\Events\JobQueued;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -28,9 +29,13 @@ class AppServiceProvider extends ServiceProvider
     {
         //
 
+        Queue::looping(function () {
+            Log::info('teste');
+        });
+
+
         Queue::before(function (JobProcessing $event) {
-            
-            Log::info('Event Job '.$event->connectionName);
+            Log::info('Event Job '.$event->job->getJobId());
             //Log::info($event->job);
          //   Log::info('Event Job '.$event->job->payload());
         });

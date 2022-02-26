@@ -33,8 +33,8 @@ class AtualizaAddressBook implements ShouldQueue
     {
 
         $job_id = $this->job->getJobId();
-        Log::info('iniciando job '.$job_id);
-        sleep(15);
-        Log::info('finalizando job '.$job_id);
+        //Log::info('iniciando job '.$job_id);
+        sleep(5);
+        //Log::info('finalizando job '.$job_id);
     }
 }
