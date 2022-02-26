@@ -14,7 +14,7 @@ return [
     */
 
     'new_user' => 'New User',
-    'users' => 'Users',
+    'roles' => 'Roles',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
 ];
