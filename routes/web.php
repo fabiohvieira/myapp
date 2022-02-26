@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterNewUserController;
 use App\Jobs\AtualizaAddressBook;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Contracts\Bus\Dispatcher;
@@ -16,17 +17,20 @@ use Illuminate\Contracts\Bus\Dispatcher;
 |
 */
 
-Route::get('login', function(){
-    return view('layouts.login');
-})->name('login');
+Route::get('login', [LoginController::class, 'index'])->name('login');
+Route::post('login', [LoginController::class, 'login']);
+Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('register', 'RegisterNewUserController@create')->name('register');
+Route::post('register', 'RegisterNewUserController@store');
 
 Route::middleware('auth')->group(function(){
     Route::resource('users', UserController::class);
+    Route::get('/', function () {
+        return view('layouts.app');
+    });
 });
 
-Route::get('/', function () {
-    return view('layouts.app');
-});
 
 
 Route::get('/job', function () {

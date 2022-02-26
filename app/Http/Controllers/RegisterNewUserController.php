@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
-class UserController extends Controller
+class RegisterNewUserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-
-        return view('users.index', ['users']);
+        //
     }
 
     /**
@@ -26,7 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('layouts.register');
     }
 
     /**
@@ -37,7 +36,11 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $usuario = new User();
+        $usuario->name = $request->name;
+        $usuario->user = $request->user;
+        $usuario->password = Hash::make($request->password);
+        $usuario->save();
     }
 
     /**

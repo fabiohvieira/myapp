@@ -18,7 +18,21 @@
           </div>
         </div>
         <div class="card-body">
-          Start creating your amazing application!
+          <table class="table table-bordered">
+              <tr>
+                  <td>ID</td>
+                  <td>Name</td>
+                  <td>Last Access</td>
+              </tr>
+
+              @foreach ($users as $user)
+                 <tr>
+                     <td>{{$user->id}}</td>
+                     <td>{{$user->name}}</td>
+                     <td></td>
+                 </tr>
+              @endforeach
+          </table>
         </div>
         <!-- /.card-body -->
         <div class="card-footer">

@@ -170,7 +170,7 @@
           <img src="/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">{{Auth::user()->name}}</a>
         </div>
       </div>
 
@@ -235,7 +235,7 @@
     </div>
     <div class="sidebar-custom">
         <a href="#" class="btn btn-link"><i class="fas fa-cogs"></i></a>
-        <a href="#" class="btn btn-secondary hide-on-collapse pos-right">Help</a>
+        <a href="/logout" class="btn btn-secondary hide-on-collapse pos-right">Logout</a>
     </div>
         
     <!-- /.sidebar -->
