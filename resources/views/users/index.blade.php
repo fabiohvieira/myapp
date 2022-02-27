@@ -36,9 +36,9 @@
                         <td align="center">{{$user->id}}</td>
                         <td>{{$user->name}}</td>
                         <td align="center">
-                            <a href="{{ route('users.show', $user->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-eye"></i> @lang('crud.view')</a>
-                            <a href="{{ route('users.edit', $user->id) }}" class="btn btn-sm btn-info"><i class="fa fa-edit"></i> @lang('crud.edit')</a>
-                            <a href="{{ route('users.destroy', $user->id) }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> @lang('crud.delete')</a>
+                            <a href="{{ route('users.show', $user->id) }}" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> @lang('crud.view')</a>
+                            <a href="{{ route('users.edit', $user->id) }}" class="btn btn-xs btn-info"><i class="fa fa-edit"></i> @lang('crud.edit')</a>
+                            <a href="{{ route('users.destroy', $user->id) }}" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i> @lang('crud.delete')</a>
                         </td>
                     </tr>
                 @endforeach

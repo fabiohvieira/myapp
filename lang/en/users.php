@@ -15,6 +15,7 @@ return [
 
     'new_user' => 'New User',
     'users' => 'Users',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'id' => 'ID',
+    'name' => 'Name',
 
 ];

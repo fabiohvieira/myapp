@@ -16,7 +16,7 @@ class UserController extends Controller
     {
         $users = User::paginate(10);
 
-        return view('users.index', ['users' => $users]);
+        return view('users.index', compact('users'));
     }
 
     /**
@@ -26,7 +26,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $user = new User();
+
+        return view('users.create', compact('user'));
     }
 
     /**
@@ -37,7 +39,14 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User();
+        $user->name = $request->name;
+        $user->user = $request->user;
+        $user->password = \Hash::make($request->password);
+        $user->save();
+
+        return redirect('/users');
+
     }
 
     /**

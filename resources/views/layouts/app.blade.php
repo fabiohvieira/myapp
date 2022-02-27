@@ -22,9 +22,9 @@
   @include('layouts.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper pt-3">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
+    {{-- <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
@@ -40,7 +40,7 @@
 
 
       </div><!-- /.container-fluid -->
-    </section>
+    </section> --}}
 
     <!-- Main content -->
     <section class="content">

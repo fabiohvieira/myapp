@@ -96,6 +96,17 @@
             </a>
           </li>
 
+
+          <li class="nav-item">
+            <a href="/jobs" class="nav-link">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>
+                @lang('mail.mail')
+                {{-- <span class="right badge badge-danger">New</span> --}}
+              </p>
+            </a>
+          </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
