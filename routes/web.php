@@ -24,8 +24,14 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('register', 'RegisterNewUserController@create')->name('register');
 Route::post('register', 'RegisterNewUserController@store');
 
+
+
 Route::middleware('auth')->group(function(){
+
+    Route::resource('addressbook', AddressbookController::class);
     Route::resource('users', UserController::class);
+
+
     Route::get('/', function () {
         return view('layouts.app');
     });

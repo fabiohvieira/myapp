@@ -18,7 +18,7 @@ class UserPolicy
      */
     public function viewAny(User $user)
     {
-        abort(403);
+        //abort(403);
         Response::deny('You do not own this post.');
     }
 

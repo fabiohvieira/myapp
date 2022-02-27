@@ -6,7 +6,7 @@
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">@lang('users.users')</h3>
+            <h3 class="card-title">@lang('addressbook.addressbook')</h3>
 
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -31,7 +31,7 @@
                     <td width="70%">@lang('users.name')</td>
                     <td></td>
                 </tr>
-
+{{-- 
                 @foreach ($users as $user)
                     @can('view-any', $user)
                         <tr>
@@ -47,12 +47,12 @@
                             </td>
                         </tr>
                     @endcan
-                @endforeach
+                @endforeach --}}
             </table>
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
-            {{ $users->links() }}
+            {{-- {{ $users->links() }} --}}
         </div>
         <!-- /.card-footer-->
     </div>

@@ -66,6 +66,17 @@
           </li>
 
           <li class="nav-item">
+            <a href="/addressbook" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                @lang('addressbook.addressbook')
+                {{-- <span class="right badge badge-danger">New</span> --}}
+              </p>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
             <a href="/users" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
